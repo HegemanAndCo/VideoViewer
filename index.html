@@ -1,1 +1,43 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRR Opening Video</title>
+    <!-- Tailwind CSS CDN for easy styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for the video container */
+        body {
+            font-family: "Inter", sans-serif;
+            background-color: #f0f4f8; /* Light gray background */
+        }
+        .video-container {
+            max-width: 90%; /* Max width for responsiveness */
+            max-height: 90vh; /* Max height to fit viewport */
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+    <div class="video-container bg-white shadow-lg rounded-lg p-6 flex flex-col items-center">
+        <!-- Video Player -->
+        <video
+            id="trrVideo"
+            class="w-full h-auto rounded-md shadow-md"
+            controls
+            autoplay
+            loop
+            muted
+            playsinline
+            preload="auto"
+            onerror="this.onerror=null;this.poster='https://placehold.co/640x360/cccccc/333333?text=Video+Loading+Error';alert('Failed to load video. Please check the file path and format.');"
+        >
+            <source src="trr-opening.mp4" type="video/mp4">
+            <!-- Fallback for browsers that do not support the video tag -->
+            Your browser does not support the video tag.
+            Please ensure you are using a modern browser like Chrome, Firefox, or Edge.
+            You can also try downloading the video directly: <a href="trr-opening.mp4">Download Video</a>
+        </video>
+    </div>
+</body>
+</html>
